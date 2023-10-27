@@ -96,8 +96,7 @@ void Stack<T>::print()
 
 //оператор сравнения двух стеков
 template <typename T>
-template<typename U>
-bool Stack<T>::operator==(const Stack<U>& right)
+bool Stack<T>::operator==(const Stack<T>& right)
 {
 	if (this->top != right.top)
 	{
@@ -114,8 +113,7 @@ bool Stack<T>::operator==(const Stack<U>& right)
 }
 
 template <typename T>
-template<typename U>
-bool Stack<T>::operator!=(const Stack<U>& right)
+bool Stack<T>::operator!=(const Stack<T>& right)
 {
 	return !(*this == right);
 }

@@ -9,6 +9,8 @@ public:
 
 	Stack();
 
+	Stack(Stack<T>& right);
+
 	~Stack();
 
 	int size();
@@ -21,6 +23,14 @@ public:
 
 	int last();
 
+	void print();
+
+	template<typename U>
+	bool operator==(const Stack<U>& right);
+
+	template<typename U>
+	bool operator!=(const Stack<U>& right);
+
 private:
 
 	int capacity;
@@ -28,7 +38,6 @@ private:
 	T* storage;
 
 	void resize(int new_capacity);
-
 };
 #include "Stack-impl.h"
 #endif

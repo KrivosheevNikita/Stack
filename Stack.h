@@ -25,11 +25,9 @@ public:
 
 	void print();
 
-	template<typename U>
-	bool operator==(const Stack<U>& right);
+	bool operator==(const Stack<T>& right);
 
-	template<typename U>
-	bool operator!=(const Stack<U>& right);
+	bool operator!=(const Stack<T>& right);
 
 private:
 
